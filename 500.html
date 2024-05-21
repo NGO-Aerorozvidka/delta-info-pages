@@ -1,71 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-<head>
-    <meta charset="UTF-8"/>
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=5"
+  />
+  <head>
+    <meta charset="UTF-8" />
     <title>Технічні роботи</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Georgia, "Times New Roman", Times, serif
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        body, html {
-            color: #919191;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background-color: #2d2e33;
-            box-sizing: border-box;
-            padding: 20px;
-        }
+      body,
+      html {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #919191;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: #2d2e33;
+        box-sizing: border-box;
+        padding: 20px;
+      }
 
-        .container {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+      .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
 
+      .main__wrapper {
+        margin-bottom: 5%;
+      }
 
+      .main__text {
+        text-transform: uppercase;
+        font-size: 48px;
+        color: #919191;
+        line-height: normal;
+        margin-bottom: 20px;
+      }
+
+      .explanation__text {
+        font-size: 24px;
+        margin: 0 0 24px 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      @media (width <= 900px) {
         .main__text {
-            text-transform: uppercase;
-            font-size: 48px;
-            color: #919191;
-            line-height: normal;
-            margin-bottom: 20px;
+          font-size: 30px;
         }
-
         .explanation__text {
-            font-size: 24px;
-            margin: 0 0 24px 0;
+          font-size: 22px;
         }
+      }
 
-        a {
-            outline: 0;
-            text-decoration: none;
-            color: #1565c0;
-            background-color: transparent;
+      @media (width <= 600px) {
+        .main__text {
+          font-size: 24px;
         }
+        .explanation__text {
+          font-size: 20px;
+        }
+      }
 
-        span {
-            white-space: nowrap;
+      @media (height <= 420px) {
+        .main__text {
+          font-size: 20px;
         }
-        .cf-error-details {
-            display: none;
+        .explanation__text {
+          font-size: 16px;
         }
+      }
+
+      a {
+        outline: 0;
+        text-decoration: none;
+        color: #80aaff;
+        background-color: transparent;
+      }
+
+      a:hover {
+        color: #9bf;
+      }
+
+      a:active {
+        color: #b2ccff;
+      }
+
+      strong {
+        white-space: nowrap;
+      }
+
+      .cf__error-text {
+        margin-top: 3%;
+      }
+
+      .cf-error-details {
+        display: none;
+      }
     </style>
-</head>
-<body>
-<div class="container">
-    <p class="main__text">Технічні роботи, вибачте за тимчасові незручності!</p>
-    <p class="main__text">Перезавантажте сторінку за декілька хвилин</p>
-    <p class="explanation__text">У разі виникнення питань звертайтесь на електронну адресу <a href="mailto:support@delta.mil.gov.ua?subject=Переїзд на нову адресу">support@delta.mil.gov.ua</a> або Signal/WhatsApp: <span>+380 98 297 67 68</span></p>
-    ::CLOUDFLARE_ERROR_500S_BOX::
-</div>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main__wrapper">
+        <p class="main__text">
+          Технічні роботи, вибачте за тимчасові незручності!
+        </p>
+        <p class="main__text">Перезавантажте сторінку за декілька хвилин</p>
+      </div>
+
+      <p class="explanation__text">
+        У разі виникнення питань звертайтесь на електронну адресу
+        <a href="mailto:support@delta.mil.gov.ua?subject=Переїзд на нову адресу"
+          >support@delta.mil.gov.ua</a
+        >
+        або Signal/WhatsApp: <strong>+380 98 297 67 68</strong>
+      </p>
+      <div class="cf__error-text">::CLOUDFLARE_ERROR_500S_BOX::</div>
+    </div>
+  </body>
 </html>
